@@ -74,17 +74,17 @@ body {
 }
 
 .table .sort-icon.sort-ascending:after {
-  background-image: url('sort-down.svg');
+  background-image: url('assets/sort-down.svg');
   transform: translateY(-2px);
 }
 
 .table .sort-icon.sort-descending:after {
-  background-image: url('sort-up.svg');
+  background-image: url('assets/sort-up.svg');
   transform: translateY(3px);
 }
 
 .table .sort-icon.sort-none:after {
-  background-image: url('sort.svg');
+  background-image: url('assets/sort.svg');
 }
 
 .list {
@@ -141,7 +141,7 @@ body {
 }
 
 .list .details-btn:after {
-  background-image: url('angle-down.svg');
+  background-image: url('assets/angle-down.svg');
   background-size: 100%;
   content: '';
   display: inline-block;
@@ -152,5 +152,5 @@ body {
 }
 
 .list .details-btn.hide:after {
-  background-image: url('angle-up.svg');
+  background-image: url('assets/angle-up.svg');
 }

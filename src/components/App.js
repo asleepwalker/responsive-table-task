@@ -4,7 +4,6 @@ import { orderBy } from 'lodash';
 
 import Desktop from './Desktop';
 import Mobile from './Mobile';
-import { applyModifiers } from './utils';
 
 export default class App extends Component {
   constructor(props) {
@@ -12,8 +11,20 @@ export default class App extends Component {
     this.state = {};
     fetch('/data.json')
       .then(res => res.json())
-      .then(applyModifiers)
+      .then(this.applyModifiers)
       .then(data => this.setState(data));
+  }
+
+  applyModifiers(data) {
+    const columns = data.columns.map(column => {
+      const modifications = {}
+      if (column.html) {
+        modifications.render = value =>
+          <div dangerouslySetInnerHTML={{__html: value }} />;
+      }
+      return { ...column, ...modifications };
+    });
+    return { ...data, columns };
   }
 
   handleSort = sortBy => {
