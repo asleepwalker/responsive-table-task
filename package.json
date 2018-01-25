@@ -18,6 +18,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "homepage" : "http://151.248.123.190:8080/responsive-table-task/"
+  }
 }
